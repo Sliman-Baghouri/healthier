@@ -1,0 +1,233 @@
+/* GLOBAL */
+
+body{
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+/* page transition */
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+ 
+ /* button style */
+button.styled-btn{
+    position: relative;
+    padding:10px;
+    margin-top: 2%;
+    font-size: 1.2em;
+    font-weight: 800;
+    width: 220px;
+    border: none;
+    background: #000;
+    color: #FFF;
+    outline: none;
+    &:after{
+		content: '';
+	    display: block;
+	    width: 31.5px;
+	    height: 31.5px;
+	    position: absolute;
+	    background: black;
+	    right: -16px;
+	    top: 7.2px;
+	    transform: rotate(45deg);		    	
+    }
+}
+
+
+p{
+  // margin: 0 0 20px 0;
+  color: #232323;
+}
+
+a{
+  text-decoration:none;
+  color:#000;
+}
+
+em{
+  font-style: italic;
+}
+
+strong{
+  font-weight: bold;
+}
+
+hr{
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}
+
+
+
+/* Links
+  ------------------------------------  */
+// a
+//   color: $accent
+//   text-decoration: none
+//   outline: 0
+
+// a:hover, a:focus
+//   color: lighten($accent, 20%)
+
+
+ 
+/* Selection colors (easy to forget)
+  ------------------------------------  */
+
+// ::selection
+//   background: $selectionColor
+
+// ::-moz-selection
+//   background: $selectionColor
+
+// img::selection
+//   background: transparent
+
+// img::-moz-selection
+//   background: transparent
+
+// body
+//   -webkit-tap-highlight-color: $selectionColor
+
+
+/* Basic Styles
+  ------------------------------------  */
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left:20px;
+  padding-right:20px;
+  position:relative;
+}
+
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+// reseting lists
+
+ul, ol{ 
+  padding: 0;
+  margin: 0;  
+}
+
+ul{
+  list-style: none;
+}
+
+.main-row{
+  padding-top: 100px;
+}
+
+.row{
+    margin-top: 100px;
+}
+
+section {
+  margin-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+// Typogrophy 
+.italic{
+  font-family: 'Raleway', sans-serif;
+}
+.hairline {
+  font-family: 'Raleway', sans-serif;
+}
+.bold{
+  font-family: 'Raleway', sans-serif;
+}
+.light{
+  font-family: 'Raleway', sans-serif;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.lowercase{
+  text-transform: lowercase; 
+}
+
+.fadeIn{
+  opacity: 1 !important;
+}
+
+.fadeOut{
+  opacity: 0 !important;
+}
+
+// blue underline
+.underline{
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      top: 70%;
+      transform: translateY(209%);
+      height: 12%;
+      width: 100%;
+      background: #ffed00;
+      background-repeat: no-repeat;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;          
+    }
+}
+
+fieldset{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.link-color-switch{
+  color:#000 !important;
+}
+
+.go-up{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    opacity: 0;
+    z-index: -9;
+    background: #FFF;
+    color:#000; 
+    bottom: 100px;
+    border: 3px solid #000;
+    cursor: pointer;
+    z-index: 99999999;
+    right: 50px;
+    border-radius: 50%;
+    text-align: center;
+    transition:.1s;
+    i{font-size:2em;}
+    &:hover{
+      background:#000;
+      color:#FFF;
+    }
+}
+
+.subs{
+  margin-bottom:137px;
+}

@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<header class="header-blog" style="background:url('{{site.url}}/{{page.featImg}}')">
+	<div class="about-nav">
+		{% include navbar.html %}
+	</div>
+	<div class="blog-overlay">
+		<div class="overlay"></div>		
+	</div>
+</header>
+<section class="blog-content">
+	<div class="container">
+		<article class="blog-text-holder">
+			<div class="author-avatar">
+				<img src="{{ site.url }}{{ site.data.authors[page.author].avatar }}" alt="{{site.data.authors[page.author].name}}">
+				<p><i class="fas fa-pen-alt"></i> Written By Dr. <span class="underline">{{site.data.authors[page.author].name}}</span> </p>
+				<p><i class="fas fa-file-alt"></i> On: <span class="underline">{{page.date | date:"%B %e, %Y"}}</span> </p>
+			</div>
+			<hr>
+			<h1 style="text-transform: capitalize;" >{{ page.title }}</h1>
+			<hr>
+			{{ content }}
+		</article>
+	</div>
+</section>
+
+<section class="landing-posts">
+  <h1>Further Reads.</h1>
+    <div class="container">
+         <div class="posts-holder">  
+
+              {% for post in site.posts %}
+            
+              <div class="post _1">
+                    <a href="{{ post.url }}">
+                        <div class="post-image"></div>
+                        <div class="post-text">
+                            <div class="category">
+                                <h4>{{post.categories}}</h4>
+                                <span>10 minute read</span>    
+                            </div>
+                            <h2>{{ post.title }}</h2> 
+                            <p>{{ post.date | date_to_long_string }}</p>  
+                        </div> 
+                      
+                    </a>  
+              </div>      
+
+            {% endfor %}
+
+         </div>
+    </div>
+</section>
+

@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<header class="blog-header">
+<!-- Vector Shape -->
+<svg class="blog-shape"  viewBox="0 0 1435 785" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M638.37 319.258C398.33 332.561 114.643 126.451 0 0H1434.21V785C1386 554 1238.5 286 638.37 319.258Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="26" y1="16" x2="1434" y2="757.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FF64"/>
+<stop offset="1" stop-color="#00FF64" stop-opacity="0.47"/>
+</linearGradient>
+</defs>
+</svg>
+	
+	<div class="blog-nav">
+	<nav>
+		<a href="/">
+			<img src="assets/img/logo/logo-text-white.png" alt="healthier logo">
+		</a>
+		<ul>
+			<li><a href="/">home</a></li>	
+			<li><a class="contactx" href="#">Contact</a></li>	
+			<li><a href="/faq">FAQs</a></li>	
+		</ul>
+	</nav>
+	</div>
+
+<div class="container">
+	<h1>Quick Health Tips from Our<br> Award Winning Doctors</h1>
+</div>
+</header>
+
+<section class="all_posts">
+	<div class="container">
+		<div class="main-blog">
+			<div class="text-content">
+				<div class="kicker">
+					<h2>Nutrition <span>10 minutes read</span></h2>
+				</div>
+				<div class="text-bottom">
+					<h1>How to Collaborate <br> Remote Color Grading <br> Workflow and <br> enhancment to be made</h1>
+					<p>April 14, 2020</p>
+				</div>
+			</div>
+			<div class="image-content"></div>
+		</div>
+	</div>
+</section>
+
+
+<section style="margin-top:0 !important" class="landing-posts">
+    <div class="container">
+         <div class="posts-holder">  
+
+              {% for post in site.posts %}
+            
+              <div class="post _1">
+                    <a href="{{ post.url }}">
+                        <div class="post-image"></div>
+                        <div class="post-text">
+                            <div class="category">
+                                <h4>{{post.categories}}</h4>
+                                <span>10 minute read</span>    
+                            </div>
+                            <h2>{{ post.title }}</h2> 
+                            <p>{{ post.date | date_to_long_string }}</p>  
+                        </div> 
+                      
+                    </a>  
+              </div>      
+
+            {% endfor %}
+
+         </div>
+    </div>
+</section>
+
+
